@@ -14,5 +14,6 @@ public class Main {
 
         AdventDay1 ad1 = new AdventDay1();
         System.out.println(ad1.findTotalReqFuel(adventDay1TestValues));
+        System.out.println(ad1.totalFuelReqFuel(adventDay1TestValues));
     }
 }

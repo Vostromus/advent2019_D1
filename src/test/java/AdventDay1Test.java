@@ -27,4 +27,21 @@ public class AdventDay1Test {
         int[] massValues = {12,14,1969,100756};
         assertEquals(34241,adventDay1.findTotalReqFuel(massValues));
     }
+
+    @Test
+    @DisplayName("Find Fuel including required fuel")
+    void testFuelRequiringFuel(){
+        AdventDay1 adventDay1 = new AdventDay1();
+        assertEquals(2,adventDay1.fuelReqFuel(14));
+        assertEquals(966,adventDay1.fuelReqFuel(1969));
+        assertEquals(50346,adventDay1.fuelReqFuel(100756));
+    }
+
+    @Test
+    @DisplayName("Find Total Fuel including required fuel")
+    void testTotalFuelRequiringFuel(){
+        AdventDay1 adventDay1 = new AdventDay1();
+        int[] testValues = {14,1969,100756};
+        assertEquals(51314, adventDay1.totalFuelReqFuel(testValues));
+    }
 }
