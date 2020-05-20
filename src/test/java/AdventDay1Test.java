@@ -9,4 +9,22 @@ public class AdventDay1Test {
         AdventDay1 adventDay1 = new AdventDay1();
         assertEquals("Day 1 Test", adventDay1.dayOneTest(),"Should return 'Day 1 Test'");
     }
+
+    @Test
+    @DisplayName("Find Required Fuel")
+    void testRequiredFuel(){
+        AdventDay1 adventDay1 = new AdventDay1();
+        assertEquals(2,adventDay1.findReqFuel(12),"This should equal 2");
+        assertEquals(2,adventDay1.findReqFuel(14),"This should equal 2");
+        assertEquals(654,adventDay1.findReqFuel(1969),"This should equal 654");
+        assertEquals(33583,adventDay1.findReqFuel(100756),"This should equal 33583");
+    }
+
+    @Test
+    @DisplayName("Find Total Required Fuel")
+    void testTotalRequiredFuel(){
+        AdventDay1 adventDay1 = new AdventDay1();
+        int[] massValues = {12,14,1969,100756};
+        assertEquals(34241,adventDay1.findTotalReqFuel(massValues),"This should equal 34241");
+    }
 }
